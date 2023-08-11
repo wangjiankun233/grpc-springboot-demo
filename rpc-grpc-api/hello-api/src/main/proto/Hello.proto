@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = false;
+option java_package="com.wjk.demo.helloworld";
+
+//请求
+message Request {
+  double num1 = 1;
+  double num2 = 2;
+}
+
+message Response {
+  double result = 1;
+}
+
+//定义服务
+service HelloService {
+  rpc GetSum (Request) returns (Response);
+}

@@ -1,0 +1,18 @@
+# Tomcat
+server:
+  port: 9400
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: test-grpc
+  profiles:
+    # 环境配置
+    active: prod
+
+grpc:
+  client:
+    server1:
+      address: 'static://127.0.0.1:8888'
+      negotiation-type: plaintext

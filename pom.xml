@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wjk</groupId>
+    <artifactId>grpc-springboot-demo</artifactId>
+    <version>1.0.0</version>
+    <name>grpc-springboot-demo</name>
+    <modules>
+        <module>rpc-grpc-api</module>
+        <module>rpc-grpc-server</module>
+        <module>rpc-grpc-client</module>
+
+    </modules>
+    <packaging>pom</packaging>
+    <description>Demo project for Spring Boot Grpc</description>
+    <properties>
+        <java.version>8</java.version>
+        <spring-boot.version>2.7.5</spring-boot.version>
+        <grpc.version>1.51.0</grpc.version>
+        <grpc-boot-start.version>4.9.1</grpc-boot-start.version>
+        <grpc-client-boot-start.version>2.14.0.RELEASE</grpc-client-boot-start.version>
+        <os-maven-plugin.version>1.6.0</os-maven-plugin.version>
+        <protobuf-maven-plugin.version>0.5.1</protobuf-maven-plugin.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-netty-shaded</artifactId>
+                <version>${grpc.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency> <!-- necessary for Java 9+ -->
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>annotations-api</artifactId>
+                <version>6.0.53</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.github.lognet</groupId>
+                <artifactId>grpc-spring-boot-starter</artifactId>
+                <version>${grpc-boot-start.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.devh</groupId>
+                <artifactId>grpc-client-spring-boot-starter</artifactId>
+                <version>${grpc-client-boot-start.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wjk</groupId>
+                <artifactId>hello-api</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+
+</project>

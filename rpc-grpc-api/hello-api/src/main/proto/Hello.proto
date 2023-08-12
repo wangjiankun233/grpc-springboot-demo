@@ -16,4 +16,7 @@ message Response {
 //定义服务
 service HelloService {
   rpc GetSum (Request) returns (Response);
+  rpc GetSum2(Request) returns (stream Response);
+  rpc GetSum3(stream Request) returns (Response);
+  rpc GetSum4(stream Request) returns (stream Response);
 }

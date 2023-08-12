@@ -1059,9 +1059,11 @@ public final class Hello {
     java.lang.String[] descriptorData = {
       "\n\013Hello.proto\"%\n\007Request\022\014\n\004num1\030\001 \001(\001\022\014" +
       "\n\004num2\030\002 \001(\001\"\032\n\010Response\022\016\n\006result\030\001 \001(\001" +
-      "2-\n\014HelloService\022\035\n\006GetSum\022\010.Request\032\t.R" +
-      "esponseB\033\n\027com.wjk.demo.helloworldP\000b\006pr" +
-      "oto3"
+      "2\225\001\n\014HelloService\022\035\n\006GetSum\022\010.Request\032\t." +
+      "Response\022 \n\007GetSum2\022\010.Request\032\t.Response" +
+      "0\001\022 \n\007GetSum3\022\010.Request\032\t.Response(\001\022\"\n\007" +
+      "GetSum4\022\010.Request\032\t.Response(\0010\001B\033\n\027com." +
+      "wjk.demo.helloworldP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

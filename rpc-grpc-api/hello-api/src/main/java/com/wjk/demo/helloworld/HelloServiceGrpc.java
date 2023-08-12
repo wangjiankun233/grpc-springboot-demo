@@ -49,6 +49,99 @@ public final class HelloServiceGrpc {
     return getGetSumMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum2Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSum2",
+      requestType = com.wjk.demo.helloworld.Hello.Request.class,
+      responseType = com.wjk.demo.helloworld.Hello.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum2Method() {
+    io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response> getGetSum2Method;
+    if ((getGetSum2Method = HelloServiceGrpc.getGetSum2Method) == null) {
+      synchronized (HelloServiceGrpc.class) {
+        if ((getGetSum2Method = HelloServiceGrpc.getGetSum2Method) == null) {
+          HelloServiceGrpc.getGetSum2Method = getGetSum2Method =
+              io.grpc.MethodDescriptor.<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSum2"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("GetSum2"))
+              .build();
+        }
+      }
+    }
+    return getGetSum2Method;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum3Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSum3",
+      requestType = com.wjk.demo.helloworld.Hello.Request.class,
+      responseType = com.wjk.demo.helloworld.Hello.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum3Method() {
+    io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response> getGetSum3Method;
+    if ((getGetSum3Method = HelloServiceGrpc.getGetSum3Method) == null) {
+      synchronized (HelloServiceGrpc.class) {
+        if ((getGetSum3Method = HelloServiceGrpc.getGetSum3Method) == null) {
+          HelloServiceGrpc.getGetSum3Method = getGetSum3Method =
+              io.grpc.MethodDescriptor.<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSum3"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("GetSum3"))
+              .build();
+        }
+      }
+    }
+    return getGetSum3Method;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum4Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSum4",
+      requestType = com.wjk.demo.helloworld.Hello.Request.class,
+      responseType = com.wjk.demo.helloworld.Hello.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request,
+      com.wjk.demo.helloworld.Hello.Response> getGetSum4Method() {
+    io.grpc.MethodDescriptor<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response> getGetSum4Method;
+    if ((getGetSum4Method = HelloServiceGrpc.getGetSum4Method) == null) {
+      synchronized (HelloServiceGrpc.class) {
+        if ((getGetSum4Method = HelloServiceGrpc.getGetSum4Method) == null) {
+          HelloServiceGrpc.getGetSum4Method = getGetSum4Method =
+              io.grpc.MethodDescriptor.<com.wjk.demo.helloworld.Hello.Request, com.wjk.demo.helloworld.Hello.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSum4"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wjk.demo.helloworld.Hello.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new HelloServiceMethodDescriptorSupplier("GetSum4"))
+              .build();
+        }
+      }
+    }
+    return getGetSum4Method;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -107,6 +200,27 @@ public final class HelloServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSumMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getSum2(com.wjk.demo.helloworld.Hello.Request request,
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSum2Method(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Request> getSum3(
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getGetSum3Method(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Request> getSum4(
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getGetSum4Method(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -116,6 +230,27 @@ public final class HelloServiceGrpc {
                 com.wjk.demo.helloworld.Hello.Request,
                 com.wjk.demo.helloworld.Hello.Response>(
                   this, METHODID_GET_SUM)))
+          .addMethod(
+            getGetSum2Method(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+              new MethodHandlers<
+                com.wjk.demo.helloworld.Hello.Request,
+                com.wjk.demo.helloworld.Hello.Response>(
+                  this, METHODID_GET_SUM2)))
+          .addMethod(
+            getGetSum3Method(),
+            io.grpc.stub.ServerCalls.asyncClientStreamingCall(
+              new MethodHandlers<
+                com.wjk.demo.helloworld.Hello.Request,
+                com.wjk.demo.helloworld.Hello.Response>(
+                  this, METHODID_GET_SUM3)))
+          .addMethod(
+            getGetSum4Method(),
+            io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+              new MethodHandlers<
+                com.wjk.demo.helloworld.Hello.Request,
+                com.wjk.demo.helloworld.Hello.Response>(
+                  this, METHODID_GET_SUM4)))
           .build();
     }
   }
@@ -144,6 +279,30 @@ public final class HelloServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSumMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getSum2(com.wjk.demo.helloworld.Hello.Request request,
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getGetSum2Method(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Request> getSum3(
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
+          getChannel().newCall(getGetSum3Method(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Request> getSum4(
+        io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getGetSum4Method(), getCallOptions()), responseObserver);
+    }
   }
 
   /**
@@ -168,6 +327,14 @@ public final class HelloServiceGrpc {
     public com.wjk.demo.helloworld.Hello.Response getSum(com.wjk.demo.helloworld.Hello.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSumMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.wjk.demo.helloworld.Hello.Response> getSum2(
+        com.wjk.demo.helloworld.Hello.Request request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getGetSum2Method(), getCallOptions(), request);
     }
   }
 
@@ -198,6 +365,9 @@ public final class HelloServiceGrpc {
   }
 
   private static final int METHODID_GET_SUM = 0;
+  private static final int METHODID_GET_SUM2 = 1;
+  private static final int METHODID_GET_SUM3 = 2;
+  private static final int METHODID_GET_SUM4 = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -220,6 +390,10 @@ public final class HelloServiceGrpc {
           serviceImpl.getSum((com.wjk.demo.helloworld.Hello.Request) request,
               (io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response>) responseObserver);
           break;
+        case METHODID_GET_SUM2:
+          serviceImpl.getSum2((com.wjk.demo.helloworld.Hello.Request) request,
+              (io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response>) responseObserver);
+          break;
         default:
           throw new AssertionError();
       }
@@ -230,6 +404,12 @@ public final class HelloServiceGrpc {
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_SUM3:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getSum3(
+              (io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response>) responseObserver);
+        case METHODID_GET_SUM4:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getSum4(
+              (io.grpc.stub.StreamObserver<com.wjk.demo.helloworld.Hello.Response>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -282,6 +462,9 @@ public final class HelloServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HelloServiceFileDescriptorSupplier())
               .addMethod(getGetSumMethod())
+              .addMethod(getGetSum2Method())
+              .addMethod(getGetSum3Method())
+              .addMethod(getGetSum4Method())
               .build();
         }
       }
